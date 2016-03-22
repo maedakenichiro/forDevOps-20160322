@@ -16,8 +16,8 @@ deployment:
   production: # just a label; label names are completely up to you
     branch: master
     commands:
-      - aws s3 sync html/ s3://maeda-fordevops-master-20160322.s3-website-ap-northeast-1.amazonaws.com/ --delete
+      - aws s3 sync html/ s3://maeda-fordevops-master-20160322/ --delete
   staging:
     branch: staging
     commands:
-      - aws s3 sync html/ s3://maeda-fordevops-20160322.s3-website-ap-northeast-1.amazonaws.com/ --delete
+      - aws s3 sync html/ s3://maeda-fordevops-20160322/ --delete
