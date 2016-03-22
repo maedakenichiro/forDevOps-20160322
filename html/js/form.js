@@ -1,6 +1,6 @@
 var $id = function(id) { return document.getElementById(id); };
 AWS.config.region = "ap-northeast-1";
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: "ap-northeast-1:ae67d660-90d8-4f96-93e0-1f480faf5973"}); ##ここに控えておいたPoolIdを記載
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: "ap-northeast-1:ae67d660-90d8-4f96-93e0-1f480faf5973"});
 AWS.config.credentials.get(function(err) {
     if (!err) {
         console.log("Cognito Identify Id: " + AWS.config.credentials.identityId);
