@@ -28,7 +28,7 @@ exports.handler = function(event, context) {
                                 Data: "HPからお問い合わせがありました。" + "From:" + message.url
                             }
                         },
-                        Source: "info@proudit.jp"
+                        Source: "maeda.kenichiro@jp.fujitsu.com"
                         };
 
                         console.log('===SENDING EMAIL===');
