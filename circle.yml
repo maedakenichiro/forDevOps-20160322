@@ -27,4 +27,4 @@ deployment:
       - aws s3 sync html/ s3://maeda-fordevops-20160322/ --delete
       - cd lambda/sendMailTest/ && zip -r sendMailTest.zip ./*
       #- aws lambda update-function-code --function-name maeda-fordevops-form-20160322 --zip-file fileb://./lambda/sendMailTest/sendMailTest.zip --publish
-      - aws lambda create-function --function-name maeda-fordevops-form-20160323 --runtime nodejs --zip-file fileb://./lambda/sendMailTest/sendMailTest.zip --publish
+      - aws lambda create-function --function-name maeda-fordevops-form-20160323 --runtime nodejs --role arn:aws:iam::684142680491:role/maeda-mycorpsite-lambda-role-20160322 --handler maeda-fordevops-form-20160323.handler --zip-file fileb://./lambda/sendMailTest/sendMailTest.zip --publish
