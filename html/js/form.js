@@ -20,7 +20,7 @@ function uploadFile() {
     s3.putObject({Key: "uploads/" +now.getTime()+".txt", ContentType: "text/plain", Body: blob, ACL: "public-read"},
     function(err, data){
     if(data !== null){
-    alert("お問い合わせ完了致しました");
+    alert("E-mail is sent");
         console.log('data:' + data);
     }
     else{

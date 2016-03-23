@@ -25,5 +25,5 @@ deployment:
     commands:
       - sed -i -e "s/REPLACE-DATA-BACKET/maeda-fordevops-form-20160322/g" html/js/form.js
       - aws s3 sync html/ s3://maeda-fordevops-20160322/ --delete
-      - cd lambda/ && zip -r lambda.zip ./*
-      - aws lambda update-function-code --function-name maeda-fordevops-form-20160322 --zip-file fileb://./lambda/lambda.zip --publish
+      - cd lambda/sendMailTest/ && zip -r sendMailTest.zip ./*
+      - aws lambda update-function-code --function-name maeda-fordevops-form-20160322 --zip-file fileb://./lambda/sendMailTest/sendMailTest.zip --publish
